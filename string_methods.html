@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+</head>
+<body>
+    <script>
+        var name="Amit Roy";
+        document.write("You entered the string: "+name+"<br/>")
+        //length of a string
+        document.write("The length is: "+name.length+"<br/>");
+        
+        //printing an specific position character using charAt
+
+        document.write(name.charAt(2)); //string position starts from 0 index
+
+        //to convert a string to uppercase
+
+        document.write("<br/>To Uppercase: "+name.toUpperCase());
+
+        //to convert a string to lowercase
+
+        document.write("<br/>To Lowercase: "+name.toLowerCase());
+
+        //to concat to string
+        var str=" is my name";
+        document.write("<br/>After Concat:",name.concat(str));
+
+        //Slice a string
+
+        document.write("<br/> After Slicing: "+name.slice(1,3));
+        
+
+    </script>
+</body>
+</html>
