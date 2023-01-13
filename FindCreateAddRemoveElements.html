@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="http://www.google.com">Go to google</a>
+    <div class="my-div" style="background-color:brown;">
+        <h1>This is h1</h1>
+        <h1>This is h2</h1>
+    </div>
+    
+    <script>
+
+        var heading1=document.getElementsByTagName("h1")[0];
+        heading1.innerHTML="H1 Modified";
+
+        //Creating new element
+
+        var heading3=document.createElement("h1");
+        var text=document.createTextNode("This is heading 3");
+        heading3.appendChild(text);
+
+        //adding new elements
+
+        var myDiv=document.querySelector(".my-div");
+        myDiv.appendChild(heading3);
+
+        //to remove an elements
+
+        var toRemove=document.getElementsByTagName("h1")[1];
+        myDiv.removeChild(toRemove);
+
+        //to insert new elements in any position
+            //creating new elements
+        var heading4=document.createElement("h1");
+        var text4=document.createTextNode("This is heading 4");
+        heading4.appendChild(text4);
+
+        //finding the position
+        var before=document.getElementsByTagName("h1")[0] 
+            //Insertion of a element of before elements
+        myDiv.insertBefore(heading4,before);
+
+
+    </script>
+</body>
+</html>
