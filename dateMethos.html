@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var date=new Date();
+        document.write(date);
+        document.write("<br>");
+
+        var year=date.getFullYear();
+        document.write(year); 
+        document.write("<br>");
+
+        var month=date.getMonth();
+        document.write(month); //month starts from 0-11 0 is for january
+        document.write("<br>");
+
+        var currDate=date.getDate();
+        document.write(currDate);
+        document.write("<br>")
+
+        var day=date.getDay(); //day is starts from 0 to 6 and 0 is for sunday
+        document.write(day+"<br>"); 
+
+        var hour=date.getHours();
+        document.write(hour+"<br>");
+
+    </script>
+</body>
+</html>
