@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game</title>
+</head>
+<body>
+    <script>
+
+        var won=0;
+        for(var i=1;i<=5;i++){
+
+
+        var guess= parseInt(prompt("Enter a number between 1 and 5:"));
+
+        var random= Math.floor(Math.random())*5 +1;
+        
+        if(guess==random){
+            console.log("Guessing correct");
+            won++;
+        }
+
+        else{
+            console.log("Guessing wrong");
+        }
+    }
+        document.write("You won for "+won+" times<br>");
+        document.write("You lost for "+(5-won)+" times");
+
+
+    </script>
+</body>
+</html>
