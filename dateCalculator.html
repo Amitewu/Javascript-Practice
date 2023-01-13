@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Date Calculator</title>
+  </head>
+  <body>
+    <h1>Date Calculator</h1>
+    <form>
+      <label for="startDate">Start Date:</label>
+      <input type="date" id="startDate" name="startDate">
+      <br>
+      <label for="endDate">End Date:</label>
+      <input type="date" id="endDate" name="endDate">
+      <br><br>
+      <button type="button" onclick="calculateDateDiff()">Calculate</button>
+    </form>
+    <br>
+    <p id="result"></p>
+
+    <script>
+      function calculateDateDiff() {
+        var start = new Date(document.getElementById("startDate").value);
+        var end = new Date(document.getElementById("endDate").value);
+        var diff = end - start;
+        var diffInDays = diff / (1000 * 60 * 60 * 24);
+        document.getElementById("result").innerHTML = "The number of days between the two dates is: " + diffInDays;
+      }
+    </script>
+  </body>
+</html>
