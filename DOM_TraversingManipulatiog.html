@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Welcome to webpage</h1>
+    <ol class="p1"  type="I">
+        <li class="c1">Child 1</li>
+        <li class="c2">Child 2</li>
+        <li class="c3">Child 3</li>
+    </ol>
+
+    <script>
+        var parent=document.querySelector(".p1"); //selecting parent
+        var child1=parent.querySelector(".c1"); //accessing first child of tag ol
+        child1.innerHTML="Child 1 Modified"; //child1 modified
+
+        var anyChild=parent.children[1]; //selecting any child by index using parent
+        anyChild.innerHTML="Child 2 Modified";
+
+        //selecting parent element using child
+        var childTest=document.querySelector(".li");
+        var changeParent=childTest.parentElement;
+
+        //Sibling Selection
+        var child3=anyChild.nextElementSibling;
+        child3.innerHTML="Child 3 Modified"; 
+
+        //sideway
+        var findParent=child1.parentElement;  //Selected parent element through child
+        var child4=findParent.children[3];
+        child4.innerHTML="Child 3 Modified"
+    </script>
+</body>
+</html>
